@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/database.js"></script>
+    <script defer src="./js/index.js"></script>
+    <title>Capstone</title>
+  </head>
+  <body>
+    <header class="container__header">
+      <div class="div__header">
+        <h1 id="logo">WearTake</h1>
+        <nav>
+          <ul class="container__menu-list">
+            <li>
+              <p id="todos"><strong>Todos</strong></p>
+            </li>
+            <li><p id="acessorios">Acessórios</p></li>
+            <li><p id="cal">Calçados</p></li>
+            <li><p id="camisetas">Camisetas</p></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="div__product_no-exist" class="hidden">
+      <h1>Este produto não está disponível no momento</h1>
+    </div>
+    <main class="container__main">
+      <div class="div__main">
+        <form id="pesquise__mobile" class="form__pesquisa">
+          <input
+            id="nome__mobile"
+            type="text"
+            placeholder="Digite aqui sua pesquisa"
+          />
+          <button id="pesquise" class="button-pesquise">Pesquisar</button>
+        </form>
+        <div class="div__list-cards">
+          <ul class="container__list-cards"></ul>
+        </div>
+
+        <aside id="shopping" class="shopping">
+          <form id="pesquisa__desktop" class="form__pesquisa">
+            <input
+              id="nome"
+              type="text"
+              placeholder="Digite aqui sua pesquisa"
+            />
+            <button id="pesquise" class="button-pesquise">Pesquisar</button>
+          </form>
+          <section id="cart">
+            <div>
+              <h2 id="titulo">Carrinho de compras</h2>
+              <div class="div__add-products">
+                <ul id="addProduto"></ul>
+                <section id="carrinho-vazio" class="carrinho__vazio hidden">
+                  <p>Carrinho Vazio</p>
+                  <span>Adicione um item</span>
+                </section>
+              </div>
+
+              <section id="final" class="hidden">
+                <div class="contador">
+                  <p>Quantidade:</p>
+                  <p id="quant"></p>
+                </div>
+                <div class="contador">
+                  <p>Total:</p>
+                  <p id="total"></p>
+                </div>
+              </section>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
